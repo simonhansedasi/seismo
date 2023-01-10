@@ -3,7 +3,7 @@
 \usepackage[margin=0.75in]{geometry}
 \setlength\parindent{0pt}
 
-\title{ESS 512 HW 3}
+\title{ESS 512 HW 1}
 \date{01/09/2023}
 \author{Simon-Hans Edasi}
 
@@ -15,24 +15,55 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Ch2 Ex3}
-This is a line
+\textbf{a.} \\
+The first 10 cycles of the surface wave lasts from $20.1 * 10^2$ seconds to $23.5*10^2$ seconds, giving a dominant period of $23.5 * 10^2 - 20.1 * 10^2 = 340$ s. This gives us an individual period of 34 seconds. \\
 
-Here is a third line
+\textbf{b.} \\
+Frequency $f = \frac{1}{T}$, so our frequency is $f = \frac{1}{34s} = 0.03$ Hz \\
 
-Why is my l key now not working?
+\textbf{c.}\\
+Reading from the graph the maximum strain recorded on the seismogram looks like $\pm{275}$ microns. \\
+
+\textbf{d.}\\
+A seismic plane wave can be approximated as: $u_{z} = A \sin[{2\pi f(t - (x / c))]}$ \\
+
+\begin{center}
+
+$
+\varepsilon = \frac{\partial{u_z}}{\partial{x}} \rightarrow \varepsilon = \frac{- 2  \pi f A}{c}\cos \left[(2\pi f \left(t - \left(x / c\right)\right) \right]
+$
+\end{center}
+
+The maximum occurs when cosine = -1, so:
+
+\begin{center}
+$
+\varepsilon_{max} = \frac{2  \pi f A}{c} \rightarrow \varepsilon_{max} = \frac{2\pi \left( 0.03 s^{-1}\right)\left( 275 * 10^{-6} m\right)}{3.9 * 10^{6} m/s} = 1.33 * 10^{-11}
+$
+\end{center}
+
+
+
+
+
+ 
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Ch3 Ex1}
-Math math math.
+Period $T$ is to angular frequency $\omega$ $\left(\omega = \frac{2\pi}{T}\right)$ as wavelength $\lambda$ is to wavenumber $k$ $\left(\lambda = \frac{2\pi}{k}\right)$.
 
-More math
+
+
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Ch3 Ex2}
-Some more maths go here. Equations and units and work shown.
+Start out with a plain sine wave with an amplitude: $u_z\left(t\right) = A \sin\left[ \omega t - \phi   \right]$. There is no phase shift, so $\phi = 0$, and we are given amplitude $\left(A = 0.04m\right)$, wavelength $\left(\lambda = 8km\right)$, and wavespeed $\left(V = 5 km/s\right)$. Rewriting the equation with our given values: \\
+
+$u_z\left(t\right) = 4*10^-5 \sin
 
 
 
