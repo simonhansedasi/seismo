@@ -22,7 +22,7 @@ The first 10 cycles of the surface wave lasts from $20.1 * 10^2$ seconds to $23.
 Frequency $f = \frac{1}{T}$, so our frequency is $f = \frac{1}{34s} = 0.03$ Hz \\
 
 \textbf{c.}\\
-Reading from the graph the maximum strain recorded on the seismogram looks like $\pm{275}$ microns. \\
+Reading from the graph the maximum strain recorded on the seismogram looks like $\pm{310}$ microns. \\
 
 \textbf{d.}\\
 A seismic plane wave can be approximated as: $u_{z} = A \sin[{2\pi f(t - (x / c))]}$ \\
@@ -38,7 +38,7 @@ The maximum occurs when cosine = -1, so:
 
 \begin{center}
 $
-\varepsilon_{max} = \frac{2  \pi f A}{c} \rightarrow \varepsilon_{max} = \frac{2\pi \left( 0.30 s^{-1}\right)\left( 275 * 10^{-6} m\right)}{3.9 * 10^{6} m/s} = 1.33 * 10^{-11}
+\varepsilon_{max} = \frac{2  \pi f A}{c} \rightarrow \varepsilon_{max} = \frac{2\pi \left( 0.03 s^{-1}\right)\left( 310 * 10^{-6} m\right)}{3.9 * 10^{3} m/s} = 1.5 * 10^{-8}
 $
 \end{center}
 
@@ -65,13 +65,16 @@ Period $T$ is to angular frequency $\omega$ $\left(\omega = \frac{2\pi}{T}\right
 Start out with a plain sine wave with an amplitude: $u_z\left(t\right) = A \sin\left[ \omega t - k x + \phi   \right]$. There is no phase shift, so $\phi = 0$, and we are given amplitude $\left(A = 0.04m\right)$, wavelength $\left(\lambda = 8km\right)$, and wavespeed $\left(c = 5 km/s\right)$. We can find $\omega$ and $k$ with given values from Table 3.1: $\omega = 2\pi f = 2\pi \frac{c}{\lambda}$; $k = \frac{2\pi}{\lambda}$ \\
 
 Rewriting the equation with our given and derived values: \\
-
-$u_z\left(t\right) = 4*10^{-5} \sin\left[2\pi \frac{c}{\lambda} t - \frac{2\pi}{\lambda}x\right] = 4*10^{-5}  \sin\left[\left(\frac{2\pi}{\lambda}\right)\left(ct-x\right)\right]$ \\
+\begin{center}
+$u_z\left(t\right) = 4*10^{-2} \sin\left[2\pi \frac{c}{\lambda} t - \frac{2\pi}{\lambda}x\right] = 4*10^{-2}  \sin\left[\left(\frac{2\pi}{\lambda}\right)\left(ct-x\right)\right]$ \\
+\end{center}
 
 \textbf{b.}\\
 Strain $\varepsilon = \frac{\partial{u_z}}{\partial{x}} \rightarrow
-\varepsilon = \frac{-4*10^{-5} *2\pi}{\lambda} \cos\left[\left(\frac{2\pi}{\lambda}\right)(ct-x)\right]$. This equation is maximized when $\left(ct-x\right) = \frac{\lambda}{2}$, or when the argument of cos is $\pi$. This leaves $\varepsilon_{max} = \frac{4*10^{-5} *2\pi}{8*10^{3}} = 3.14 * 10^{-7}m$ 
-
+\varepsilon = \frac{-4*10^{-2} *2\pi}{\lambda} \cos\left[\left(\frac{2\pi}{\lambda}\right)(ct-x)\right]$. This equation is maximized when $\left(ct-x\right) = \frac{\lambda}{2}$, or when the argument of cos is $\pi$. This leaves:
+\begin{center}
+$\varepsilon_{max} = \frac{4*10^{-2} *2\pi}{8*10^{3}} = 3.14 * 10^{-5}m$ 
+\end{center}
 
 
 
