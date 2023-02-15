@@ -1,0 +1,131 @@
+\documentclass{article}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage{cancel}
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\lstset{frame=tb,
+  language=R,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{cadmiumgreen},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\usepackage[margin=0.75in]{geometry}
+\setlength\parindent{0pt}
+
+\title{Seismo 512 HW 4}
+\date{1/30/2023}
+\author{Simon-Hans Edasi}
+
+\begin{document}
+
+	\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{}
+
+Consider two types of monochromatic plane waves propagating in the x direction in a uniform medium. For each case, derive expressions for the nonzero components of the stress tensor. Refer to 2.17 to get the components of the strain tensor; then use 2.30 to obtain the stress components. Hint: Look at Example 3.4.1.
+\subsection*{a.}
+P -wave in which $U_{x} = A \sin\left(\omega t - k x\right)$
+\[
+\epsilon_{ij} = \frac{1}{2} \left[ \partial_{i} U_{j} + \partial_{j} U_{i} \right] = 
+\left[ {\begin{array}{ccc}
+ -Ak\cos\left(\omega t - kx\right)& 0 & 0\\
+    0 & 0 & 0 \\
+    0 & 0 & 0 \\
+  \end{array} }
+  \right]
+\]
+\[
+\sigma_{ij} = \lambda \delta_{ij} \epsilon_{kk} + 2 \mu \epsilon_{ij} = 
+\left[ {\begin{array}{ccc}
+   - \left(\lambda + 2 \mu \right) Ak \cos\left(\omega t-kx\right)   & 0 & 0\\
+    0 &  -\lambda Ak \cos\left(\omega t-kx\right) & 0 \\
+    0 & 0 &  -\lambda  Ak \cos\left(\omega t-kx\right) \\
+  \end{array} }
+  \right]
+\]
+\subsection*{b.} S-wave with displacements in the y direction, i.e., $U_{y} = A \sin\left(\omega t - k x\right)$. 
+
+
+\[
+\epsilon_{ij} = 
+\left[ {\begin{array}{ccc}
+    0 & -Ak\cos\left(\omega t - kx\right) & 0\\
+    -Ak\cos\left(\omega t - kx\right) & 0 & 0 \\
+    0 & 0 & 0 \\
+  \end{array} }
+  \right]
+\]
+\[
+\sigma_{ij} = 
+\left[ {\begin{array}{ccc}
+    0 & - \left(\lambda + 2 \mu \right) Ak \cos\left(\omega t-kx\right) & 0\\
+    - \left(\lambda + 2 \mu \right) Ak \cos\left(\omega t-kx\right) & 0 & 0 \\
+    0 & 0 & 0 \\
+  \end{array} }
+  \right]
+\]
+
+\section{}
+(4 points) Assume harmonic P -waves are traveling through a solid with $\alpha = 10 \frac{km}{s}$. If the maximum strain is $10^{-8}$, what is the maximum particle displacement for waves with periods of: 
+
+\subsection*{a}
+ 1 s $\quad \rightarrow \quad$ Use relationship $k = \frac{2\pi f}{\alpha}$ and $T = \frac{1}{f}$ to write $k = \frac{2\pi}{\alpha T}$ and $\omega = \frac{2\pi}{T}$, so we take the real and write:
+
+ \[
+ U(x,t) = A e^{-i\left( \omega t-kx\right)} = A e^{-i\left(\frac{2\pi}{T}t - \frac{2\pi}{\alpha T}x  \right)} = A cos \left[\left(\frac{2\pi}{T}\right)\left(t - \frac{x}{\alpha }\right)\right]
+ \]
+Strain is the spacial derivative of displacement and the P wave will be polarized in x, so we really need $\epsilon_{xx}$:
+
+\[
+\epsilon_{xx} = \left[ - \frac{2\pi}{\alpha T} A \sin \left[\left(\frac{2\pi}{T}\right)\left(t - \frac{x}{\alpha }\right)\right] \right]\quad \rightarrow \quad \epsilon_{max} = 10^{-8} = \frac{2\pi}{\alpha T}A \quad \rightarrow \quad A = \frac{\alpha T}{2\pi} * 10^{-8} = \frac{10^4 \left(1\right)}{2\pi} * 10^{-8} = \frac{10^{-4}}{2\pi}m
+\]
+\subsection*{b}
+ 10 s
+\[
+A = \frac{10^4 \left(10\right)}{2\pi} * 10^{-8} = \frac{10^{-3}}{2\pi}m
+\]
+\subsection*{c}
+ 100 s
+\[
+A = \frac{10^4 \left(100\right)}{2\pi} * 10^{-8} = \frac{10^{-2}}{2\pi}m
+\]
+\section{}
+(2 points) Is it possible to have spherical symmetry for S-waves propagating away from a point source? Under what conditions could an explosive source generate shear waves?\\
+
+No. Define spherical symmetry as $\nabla \times A = 0$
+\[
+U_{s} = \nabla \times \psi \quad \rightarrow \quad \nabla \times U_{s} = \nabla \times \nabla \times \psi = \nabla \left( \nabla \cdot \psi \right) - \nabla^{2} \psi
+\]
+The divergence term goes to zero, and the laplacian term gives us the wave equation, which is non-zero. Under conditions of anisotropy we should get shear waves, from energy not perfectly spreading in a sphere due to different velocity gradients in the material.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
